@@ -1,9 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { OPEN_MODAL } from "../utils/actions";
-import { SiteContext, useGlobalContext } from "../utils/Context";
+import { useGlobalContext } from "../utils/Context";
 
 const Register = (props) => {
-  // const dataFromContext = useContext(SiteContext);
   const dataFromContext = useGlobalContext();
   const [formComplete, setFormComplete] = useState(false);
 

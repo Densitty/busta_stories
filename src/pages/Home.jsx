@@ -1,9 +1,9 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import Login from "../auth/Login";
 import Register from "../auth/Register";
 import Header from "../components/Header";
 import Modal from "../components/Modal";
-import { SiteContext, useGlobalContext } from "../utils/Context";
+import { useGlobalContext } from "../utils/Context";
 
 const Home = () => {
   const [home, setHome] = useState({
@@ -11,7 +11,6 @@ const Home = () => {
     para: "come read and share your stories with big ladies",
   });
 
-  // const dataFromContext = useContext(SiteContext);
   const dataFromContext = useGlobalContext();
 
   const { openModal } = dataFromContext;

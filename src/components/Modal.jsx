@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { SiteContext, useGlobalContext } from "../utils/Context";
+import React from "react";
+import { useGlobalContext } from "../utils/Context";
 
 const Modal = ({ current, children }) => {
   const dataFromContext = useGlobalContext();

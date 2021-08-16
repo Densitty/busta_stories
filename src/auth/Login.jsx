@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { OPEN_MODAL } from "../utils/actions";
-// import { useHistory } from "react-router-dom";
 import { useGlobalContext } from "../utils/Context";
 
 const Login = (props) => {
@@ -24,6 +23,7 @@ const Login = (props) => {
       console.log("One of the forms is empty.");
     } else {
       setFormComplete(false);
+      closeModal();
       console.log(login);
     }
 
@@ -53,7 +53,8 @@ const Login = (props) => {
             placeholder="Enter your email"
             className="form-group__control"
             name="email"
-            value={changeInput}
+            value={login.email}
+            onChange={changeInput}
           />
         </div>
         <div className="form-group">
@@ -66,6 +67,11 @@ const Login = (props) => {
             onChange={changeInput}
           />
         </div>
+        {formComplete && (
+          <p style={{ color: "red", margin: "1rem 0" }}>
+            Please provide the correct email and password
+          </p>
+        )}
         <div className="form-group space_between">
           <button className="btn-dark">Login</button>
           <span
