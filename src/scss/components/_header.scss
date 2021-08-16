@@ -1,0 +1,101 @@
+@use "../abstracts";
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);
+  
+  &__logo {
+    @include abstracts.position(absolute, 0, 0, null, null, null, null);
+    background: rgba(#266baf, 0.4);
+    z-index: 10;
+
+    img {
+      width: 15rem;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__video {
+    @include abstracts.position(absolute, 0, 0, 0, 0, 100%, 100%);
+    overflow: hidden;
+  }
+
+  
+}
+
+.header__contents {
+  @include abstracts.position(absolute, 0, 0, 0, 0, 100%, 100%);
+  @include abstracts.darkBackground(0.4);
+
+  &__text {
+    height: 100vh;
+    @include abstracts.flexAlign(flex, flex-start, center);
+
+    &__block {
+      color: abstracts.$white;
+
+      &__header {
+        text-transform: capitalize;
+        font-weight: 900;
+        font-size: 4rem;
+        line-height: 1.2;
+        // animation: name duration timing-function delay iteration-count direction fill-mode;
+        @include abstracts.animation(header, 1s, ease-in, null , forwards);
+
+        @keyframes header {
+          0% {
+            opacity: 0;
+            transform: translateY(-8rem);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+
+      &__para {
+        margin-top: 0.8rem;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        @include abstracts.animation(para, 0.9s, linear, 0.5s, backwards);
+
+        @keyframes para {
+          0% {
+            opacity: 0;
+            transform: translateX(-8rem);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      }
+
+      &__link {
+        margin-top: 0.8rem;
+        @include abstracts.animation(link, 0.9s, ease-in-out, 1s, backwards);
+
+        @keyframes link {
+          0% {
+            opacity: 0;
+            transform: translateY(8rem);
+          }
+          75% {
+            transform: translateY(-2rem);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

@@ -1,4 +1,13 @@
-@use "scss/base/base";
+@use './scss/base/base.scss';
+// @import "./scss/base/variables";
+// @import "./scss/abstracts/mixins";
+@use "./scss/utils/utils";
+
+/* import the component styles */
+@use "./scss/components/header";
+@use "./scss/components/modal";
+
+/* @use "scss/base/base";
 // import utils
 @use "scss/utils/utils";
 // import components
@@ -17,6 +26,6 @@
 // import layout file
 @use "scss/layout/layout";
 // import abstracts file
-@use "scss/abstracts/buttons";
+@use "scss/abstracts/buttons"; */
 
 

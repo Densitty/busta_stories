@@ -1,0 +1,41 @@
+@use "../base/variables";
+
+@mixin position($position, $top, $left, $right, $bottom, $width, $height) {
+  position: $position;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+  width: $width;
+  height: $height;
+}
+
+@mixin darkBackground($opacity: 0.5 ) {
+  background-color: rgba(variables.$black, $opacity);
+}
+
+@mixin flexAlign($flex, $justify-content, $align-items) {
+  display: $flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin buttonStyle($color1, $color2, $text_color, $height, $border_radius, $fontWeight, $paddingVert, $paddingHR, $font_size) {
+  background: linear-gradient(to right, $color1, $color2);
+  color: $text_color;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  height: $height;
+  border-radius: $border_radius;
+  font-weight: $fontWeight;
+  padding: $paddingVert $paddingHR;
+  cursor: pointer;
+  text-transform: uppercase;
+  line-height: $height;
+  font-size: $font_size;
+}
+
+@mixin animation($name, $duration, $timing_function, $delay, $fill_mode ) {
+  animation: $name $duration $timing_function $delay $fill_mode;
+}
