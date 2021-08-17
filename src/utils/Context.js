@@ -1,5 +1,5 @@
 import React, { useContext, useReducer } from "react";
-import { OPEN_MODAL, CLOSE_MODAL } from "./actions";
+import { OPEN_MODAL, CLOSE_MODAL, TOGGLE_NAV } from "./actions";
 import reducer from "./reducer";
 
 const SiteContext = React.createContext();
@@ -7,6 +7,7 @@ const SiteContext = React.createContext();
 const initialState = {
   showModal: false,
   currentModal: "",
+  navState: false,
 };
 
 const SiteProvider = ({ children }) => {
@@ -24,10 +25,20 @@ const SiteProvider = ({ children }) => {
     });
   };
 
+  const closeNav = () => {
+    dispatch({ type: TOGGLE_NAV });
+  };
+
+  const openNav = () => {
+    dispatch({ type: TOGGLE_NAV });
+  };
+
   const contextData = {
     ...state,
     openModal,
     closeModal,
+    openNav,
+    closeNav,
     dispatch,
   };
 

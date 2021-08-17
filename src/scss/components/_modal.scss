@@ -4,6 +4,8 @@
   @include abstracts.position(fixed, 0, 0, 0, 0, 100%, 100%);
   @include abstracts.darkBackground(0.8);
   @include abstracts.flexAlign(flex, center, center);
+  // hide nav-bars when modal opens
+  z-index: 20;
 
   &__heading {
     font-size: 2rem;

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Login from "../auth/Login";
+import { Helmet } from "react-helmet-async";
 import Register from "../auth/Register";
 import Header from "../components/Header";
 import Modal from "../components/Modal";
@@ -17,6 +18,17 @@ const Home = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Busta Stories</title>
+        <meta
+          name="description"
+          content="Read lovely stories of thick, curvy, voluptuous ladies and the men that love them, written by both sexes."
+        />
+        <meta
+          name="keywords"
+          content="stories, curvy, girls, ladies, women, men, breasts, boobs, voluptuous, fat, erotic, romance, travel, tits, titties, thighs, horny, love, hair, body, lust, busty, travels, engagements, career, beauty"
+        />
+      </Helmet>
       <Header {...home}>
         <button onClick={openModal} className="btn-default">
           get started

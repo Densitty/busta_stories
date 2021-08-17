@@ -1,11 +1,11 @@
 @use './scss/base/base.scss';
-// @import "./scss/base/variables";
-// @import "./scss/abstracts/mixins";
 @use "./scss/utils/utils";
 
 /* import the component styles */
 @use "./scss/components/header";
 @use "./scss/components/modal";
+@use "./scss/components/nav";
+@use "./scss/components/toggle";
 
 /* @use "scss/base/base";
 // import utils

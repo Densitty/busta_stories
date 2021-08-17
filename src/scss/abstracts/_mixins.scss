@@ -39,3 +39,10 @@
 @mixin animation($name, $duration, $timing_function, $delay, $fill_mode ) {
   animation: $name $duration $timing_function $delay $fill_mode;
 }
+
+@mixin togglers($width) {
+  background: variables.$main2;
+  width: $width;
+  height: variables.$toggle_height;
+  transition: all 0.5 ease;
+}
