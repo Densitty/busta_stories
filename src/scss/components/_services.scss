@@ -1,0 +1,84 @@
+@use "../abstracts/" as *;
+
+.services {
+  background: $silverlight-40;
+  margin: 8rem 0;
+  padding: 13rem 0;
+  transform: skewY(-5deg);
+  
+  &__contents {
+    transform: skewY(5deg);
+
+    /* target the div with the class of row inside &__contents
+    alone for flex styling */
+    .row {
+      @include flexAlign(flex, null, center);
+    }
+  }
+  
+  &__heading {
+    margin-right: 10rem;
+    // margin-right: 4rem;
+    
+    &__header {
+      font-size: 3.5rem;
+      font-weight: 900;
+      line-height: 4.5rem;
+      background: linear-gradient(35deg, $black 40%, $main1 40% );
+      color: transparent;
+      background-clip: text;
+      text-transform: capitalize;
+    }
+
+    &__sub {
+      margin-top: 3.6rem;
+      font-size:1.6rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__list {
+    margin-bottom: 0.5rem;
+
+    &__heading {
+      background: $main1;
+      // background: #b18989;
+      // background: #fff;
+      font-size: 1.6rem;
+      font-weight: 400;
+      cursor: pointer;
+      padding: 1.5rem;
+      @include flexAlign(flex, space-between, center);
+      text-transform: capitalize;
+    }
+
+    &__details {
+      max-height: 0;
+      overflow: hidden;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      text-align: justify;
+      font-size: 1.4rem;
+      
+      &.active {
+        max-height: 100%;
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+        // transition: max-height 0.3s linear;
+        animation: detailsAnimation 0.3s ease-in;
+
+        @keyframes detailsAnimation {
+          from {
+            opacity: 0;
+            transform: translateY(-1rem);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0rem);
+
+          }
+        }
+      }
+    }
+  }
+}

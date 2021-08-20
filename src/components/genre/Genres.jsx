@@ -1,6 +1,6 @@
 import React from "react";
-import { useGenresContext } from "../utils/GenresContext";
-import GenresList from "./genre/GenresList";
+import { useGenresContext } from "../../utils/GenresContext";
+import GenresList from "./GenresList";
 
 const Genres = () => {
   const dataFromGenres = useGenresContext();

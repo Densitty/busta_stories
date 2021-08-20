@@ -5,7 +5,8 @@ import Login from "../auth/Login";
 import Register from "../auth/Register";
 import Header from "../components/Header";
 import Modal from "../components/Modal";
-import Genres from "../components/Genres";
+import Genres from "../components/genre/Genres";
+import Services from "../components/services/Services";
 
 const Home = () => {
   const [home, setHome] = useState({
@@ -57,6 +58,7 @@ const Home = () => {
         }
       </>
       <Genres />
+      <Services />
     </div>
   );
 };
