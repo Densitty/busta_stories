@@ -9,20 +9,20 @@
   
   div:nth-child(1) {
     @include togglers(4rem);
-    /* transition: all 0.5s linear; */
+    transition: all 0.5s linear;
     /* transform: rotateZ(-45deg) translateX(-30%); */
     transform: rotateZ(-45deg) translateY(1.1rem);
   }
   
   div:nth-child(2) {
-    /* transition: all 1s linear; */
+    transition: all 1s linear;
     opacity: 0;
     // visibility: hidden;
   }
   
   div:nth-child(3) {
     @include togglers(3rem);
-    /* transition: all 0.5s linear; */
+    transition: all 0.5s linear;
     width: 4rem;
     // transform: rotateZ(45deg) translate(-27%);
     transform: rotateZ(45deg) translateY(-1rem);
@@ -35,22 +35,22 @@
   cursor: pointer;
   z-index: 15;
   flex-direction: column;
-  // transition: all 0.5 ease;
+  transition: all 0.5 ease;
 
   div:nth-child(1) {
     @include togglers(4rem);
-    // transition: all 0.5s linear;
+    transition: all 0.5s linear;
   }
 
   div:nth-child(2) {
     @include togglers(2rem);
-    /* transition: all 1s linear; */
+    transition: all 1s linear;
     opacity: 1;
     // visibility: visible;
   }
 
   div:nth-child(3) {
     @include togglers(3rem);
-    // transition: all 0.5s linear;
+    transition: all 0.5s linear;
   }
 }

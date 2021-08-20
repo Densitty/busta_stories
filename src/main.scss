@@ -1,11 +1,20 @@
 @use './scss/base/base.scss';
 @use "./scss/utils/utils";
 
+/* import abstract files */
+@use "./scss/abstracts/buttons";
+
 /* import the component styles */
 @use "./scss/components/header";
 @use "./scss/components/modal";
 @use "./scss/components/nav";
 @use "./scss/components/toggle";
+@use "./scss/components/genres";
+@use "./scss/components/genreInfo";
+@use "./scss/components/stories";
+/* import the layout styles */
+@use "./scss/layout/layout";
+
 
 /* @use "scss/base/base";
 // import utils

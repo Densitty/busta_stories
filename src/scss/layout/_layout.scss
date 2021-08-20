@@ -1,0 +1,12 @@
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* out of 100%, divide into 12 places, to get widths for 12 column */
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: 100% / 12 * $i;
+  }
+}

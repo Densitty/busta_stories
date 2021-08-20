@@ -44,5 +44,13 @@
   background: variables.$main2;
   width: $width;
   height: variables.$toggle_height;
-  transition: all 0.5 ease;
+}
+
+@mixin status($background, $color) {
+  padding: 0.6rem 1.3rem;
+  background-color: $background;
+  color: $color;
+  font-size: 1.3rem;
+  border-radius: 0.6rem;
+  text-transform: capitalize;
 }

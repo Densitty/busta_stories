@@ -1,0 +1,106 @@
+@use "../abstracts/" as *;
+
+.stories {
+  width: 100%;
+  margin: 5rem 0;
+  background-color: $silverlight-40;
+  padding: 13rem 0;
+  transform: skewY(-5deg);
+  
+  &__container {
+    transform: skewY(5deg);
+  }
+
+  &__body {
+    width: 100%;
+    height: 100%;
+    // overflow: hidden;
+    padding: 1rem;
+    background-color: $white;
+    border-radius: 1rem;
+
+    &__image {
+      width: 100%;
+      height: 20rem;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      overflow: hidden;
+      position: relative;
+      
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s linear;
+        image-rendering: pixelated; /* for share rendering of image */
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+
+      .mostly-read {
+        @include position(absolute, 1rem, 1rem, null, null, null, null);
+        @include status($orange, $white);
+      }
+
+      .hot {
+        @include position(absolute, 1rem, 1rem, null, null, null, null);
+        @include status($main2, $white);
+      }
+
+      .new {
+        @include position(absolute, 1rem, 1rem, null, null, null, null);
+        @include status($green, $white);
+      }
+    }
+
+    &__contents {
+      margin: 1.5rem 0 0.5rem;
+
+      &__top {
+        // @include flexAlign(flex, space-between, center );
+        flex-wrap: wrap;
+        
+        &__name {
+          font-size: 1.3rem;
+          font-weight: 600;
+        }
+
+        &__author {
+          font-size: 1.1rem;
+          color: $main2;
+          font-style: italic;
+          margin-bottom: 0.8rem;
+          margin-top: 0.6rem
+        }
+        
+        &__duration {
+          @include flexAlign(flex, space-between, center );
+          flex-basis: 100%;
+          flex-wrap: wrap;
+          
+          &__time {
+            font-size: 1.4rem;
+            margin-left: 0.6rem;
+          }
+        }
+      }
+      
+      &__features {
+        @include flexAlign(flex, space-between, center );
+        margin: 0.5rem 0 0.6rem;
+
+        &__name {
+          font-size: 1.5rem;
+          text-transform: capitalize;
+        }
+      }
+
+      &__button {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+}

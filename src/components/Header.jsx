@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+// lazy-load the image
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
-const Header = ({ heading, para, children }) => {
+const Header = ({ heading, para, children, image }) => {
   const [header, setHeader] = useState({
-    path: "assets/busta_stories/videos/eros.mp4",
-    poster: "assets/busta_stories/videos/big_black_tempty.jpg",
-    logo: "assets/busta_stories/images/logo.png",
+    // path: "/assets/busta_stories/videos/eros.mp4",
+    poster: "/assets/busta_stories/videos/big_black_tempty.jpg",
+    logo: "/assets/busta_stories/images/logo.png",
   });
 
   return (
@@ -15,13 +17,17 @@ const Header = ({ heading, para, children }) => {
         </section>
       </div>
       <section className="header__video">
-        <video
-          src={header.path}
-          poster={header.poster}
-          autoPlay
-          loop
-          muted
-        ></video>
+        {image ? (
+          <LazyLoadImage src={image} alt={heading} />
+        ) : (
+          <video
+            src={header.path}
+            poster={header.poster}
+            autoPlay
+            loop
+            muted
+          ></video>
+        )}
       </section>
       <section className="header__contents">
         <div className="container">

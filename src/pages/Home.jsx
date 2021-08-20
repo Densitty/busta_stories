@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import Login from "../auth/Login";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { useGlobalContext } from "../utils/Context";
+import Login from "../auth/Login";
 import Register from "../auth/Register";
 import Header from "../components/Header";
 import Modal from "../components/Modal";
-import { useGlobalContext } from "../utils/Context";
+import Genres from "../components/Genres";
 
 const Home = () => {
   const [home, setHome] = useState({
@@ -15,6 +16,11 @@ const Home = () => {
   const dataFromContext = useGlobalContext();
 
   const { openModal } = dataFromContext;
+
+  useEffect(() => {
+    // scroll the page to the top when me forward arrow btn is clicked
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
@@ -50,14 +56,7 @@ const Home = () => {
           </>
         }
       </>
-
-      {/* {showModal && (
-        <>
-          <Modal current="loginModal">
-            <Login />
-          </Modal>
-        </>
-      )} */}
+      <Genres />
     </div>
   );
 };
