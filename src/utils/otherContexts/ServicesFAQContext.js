@@ -1,13 +1,15 @@
 import React, { useContext, useReducer } from "react";
 import servicesReducer from "./servicesReducer";
 import questions from "../../data/questions";
+import reviews from "../../data/reviews.js";
 
 const ServicesContext = React.createContext();
 
-// console.log(questions);
+// console.log(reviews);
 
 const initialState = {
   questions,
+  reviews,
 };
 
 const ServicesProvider = ({ children }) => {

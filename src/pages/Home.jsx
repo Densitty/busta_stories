@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import Modal from "../components/Modal";
 import Genres from "../components/genre/Genres";
 import Services from "../components/services/Services";
+import Reviews from "../components/reviews/Reviews";
 
 const Home = () => {
   const [home, setHome] = useState({
@@ -59,6 +60,7 @@ const Home = () => {
       </>
       <Genres />
       <Services />
+      <Reviews />
     </div>
   );
 };
