@@ -18,7 +18,11 @@ const Header = ({ heading, para, children, image }) => {
       </div>
       <section className="header__video">
         {image ? (
-          <LazyLoadImage src={image} alt={heading} />
+          <LazyLoadImage
+            src={image}
+            alt={heading}
+            style={{ width: "100%", height: "100%" }}
+          />
         ) : (
           <video
             src={header.path}
