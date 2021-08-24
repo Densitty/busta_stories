@@ -9,6 +9,7 @@ import Genres from "../components/genre/Genres";
 import Services from "../components/services/Services";
 import Reviews from "../components/reviews/Reviews";
 import Gallery from "../components/gallery/Gallery";
+import Footer from "../components/footer/Footer";
 
 const Home = () => {
   const [home, setHome] = useState({
@@ -63,6 +64,7 @@ const Home = () => {
       <Services />
       <Reviews />
       <Gallery />
+      <Footer />
     </div>
   );
 };

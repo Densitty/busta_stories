@@ -10,6 +10,8 @@ import Toggle from "./components/Toggle";
 import Notfound from "./pages/NotFound";
 import Home from "./pages/Home";
 import Details from "./pages/Details";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -22,8 +24,9 @@ const App = () => {
             <HelmetProvider>
               <Switch>
                 <Route exact path="/" component={Home} />
-                {/* <Route exact path="/about" component={About} /> */}
+                <Route exact path="/about" component={About} />
                 <Route exact path="/genre/:genreID" component={Details} />
+                <Route path="/contact" component={Contact} />
                 <Route path="*" component={Notfound} />
               </Switch>
             </HelmetProvider>

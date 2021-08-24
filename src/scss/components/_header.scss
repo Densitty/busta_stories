@@ -7,9 +7,10 @@
   clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);
   
   &__logo {
-    @include abstracts.position(absolute, 0, 0, null, null, null, null);
+    @include abstracts.position(absolute, 3rem, 0, null, null, null, null);
     background: rgba(#266baf, 0.4);
     z-index: 10;
+    cursor: pointer;
 
     img {
       width: 15rem;
@@ -53,7 +54,7 @@
 
   &__text {
     height: 100vh;
-    @include abstracts.flexAlign(flex, flex-start, center);
+    @include abstracts.flexAlign(flex, center, center);
 
     &__block {
       color: abstracts.$white;

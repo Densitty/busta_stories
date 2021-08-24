@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 // lazy-load the image
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Header = ({ heading, para, children, image }) => {
+  const history = useHistory();
   const [header, setHeader] = useState({
     // path: "/assets/busta_stories/videos/eros.mp4",
     poster: "/assets/busta_stories/videos/big_black_tempty.jpg",
@@ -12,8 +14,8 @@ const Header = ({ heading, para, children, image }) => {
   return (
     <header className="header">
       <div className="container pr">
-        <section className="header__logo">
-          <img src={header.logo} alt="logo" />
+        <section className="header__logo" onClick={() => history.push("/")}>
+          <LazyLoadImage src={header.logo} alt="logo" />
         </section>
       </div>
       <section className="header__video">

@@ -23,14 +23,16 @@
   margin-bottom: 1.3rem;
 
   &__control {
-    display: block;
-    width: 100%;
-    border-radius: 0.5rem;
-    outline: none;
-    font-size: 1.6rem;
-    border: 1px solid $silver;
-    height: 5rem;
-    padding: 0 2rem;
+    @include formControl(4rem, 0.5rem, 2rem, $silverlight);
+  }
+
+  &__textarea {
+    @include formControl(10rem, 1rem, 2rem, $silverdark);
+
+    &::placeholder {
+      font-family: sans-serif;
+      font-size: 1.5rem;
+    }
   }
 
   span {

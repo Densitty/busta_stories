@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import AboutImage from "../components/partials/AboutImage";
+import PageContainer from "../components/partials/PageContainer";
 
 const About = () => {
+  const [about, setAbout] = useState({
+    heading: "about us",
+    copyWord: "serving the best of leisure-time tales since 2020",
+    description:
+      "Read the best of leisure time stories online or download to your device for offline reading. Share the fun with friends and young ones as you read together, the best entertaining stories that keep you glued to your seat.",
+  });
   return (
     <>
       <Helmet>
@@ -9,14 +17,12 @@ const About = () => {
         <meta name="description" content="About BustaStories" />
         <meta
           name="keywords"
-          content="stories, curvy, girls, ladies, women, men, breasts, boobs, voluptuous, fat, erotic, romance, travel, tits, titties, thighs, horny, love, hair, body, lust, busty, travels, engagements, career, beauty"
+          content="stories, storybook, leisure, play, fun, playtime, reading, sci-fi, fiction, children, teens, adults, war, romance, technology, travel, culture, religion, satire, non-fiction"
         />
       </Helmet>
-      <div>
-        You love big women, you love meeting them, desire relationship with
-        them, love reading about them, have stories to share, want to read
-        stories, we have you here.
-      </div>
+      <PageContainer {...about}>
+        <AboutImage />
+      </PageContainer>
     </>
   );
 };

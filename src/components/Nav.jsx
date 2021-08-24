@@ -21,6 +21,11 @@ const Nav = () => {
               About
             </Link>
           </li>
+          <li>
+            <Link to="/contact" onClick={closeNav}>
+              Contact
+            </Link>
+          </li>
         </div>
       </div>
     </div>
