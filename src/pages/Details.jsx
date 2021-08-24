@@ -6,6 +6,7 @@ import { useGenresContext } from "../utils/GenresContext";
 import Header from "../components/Header";
 import GenreInfo from "../components/genre/GenreInfo";
 import Stories from "../components/stories/Stories";
+import Footer from "../components/footer/Footer";
 
 const Details = () => {
   const dataFromGenres = useGenresContext();
@@ -33,6 +34,7 @@ const Details = () => {
       <Header heading={details.genre} image={details.image} />
       <GenreInfo {...details} />
       <Stories stories={filteredStories} genre={details.genre} />
+      <Footer />
     </>
   );
 };

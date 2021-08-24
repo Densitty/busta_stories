@@ -30,15 +30,15 @@ const FooterLinks = () => {
   return (
     <div className="row">
       <div className="col-4 pad-15">
-        <h3 className="footer__heading">{links.headings.pages}</h3>
+        <h3 className="footer__heading animate">{links.headings.pages}</h3>
         <ShowFooterLinks links={links.pages} />
       </div>
       <div className="col-4 pad-15">
-        <h3 className="footer__heading">{links.headings.purchase}</h3>
+        <h3 className="footer__heading animate">{links.headings.purchase}</h3>
         <ShowFooterLinks links={links.purchase} external={true} />
       </div>
       <div className="col-4 pad-15">
-        <h3 className="footer__heading">{links.headings.genres}</h3>
+        <h3 className="footer__heading animate">{links.headings.genres}</h3>
         <ShowFooterLinks links={genres} />
       </div>
     </div>

@@ -12,7 +12,7 @@ const Reviews = () => {
   return (
     <section className="reviews">
       <div className="container">
-        <h2 className="heading">Our Readers say...</h2>
+        <h2 className="heading animate">Our Readers say...</h2>
         <div className="row m-left-15 m-right-15">
           {reviews.length > 0
             ? reviews.map((review) => {

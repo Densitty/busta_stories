@@ -6,7 +6,7 @@ const ShowFooterLinks = (props) => {
   const { links, external } = props;
 
   return (
-    <ul className="footer__ul">
+    <ul className="footer__ul animate">
       {links.map((link) => {
         return (
           <li key={link.id} className="footer__ul__li">

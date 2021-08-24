@@ -6,7 +6,7 @@ const Stories = ({ stories, genre }) => {
     <section className="stories">
       <div className="container">
         <div className="stories__container">
-          <h2 className="heading">{genre}</h2>
+          <h2 className="heading animate">{genre}</h2>
           <div className="row">
             {stories.length > 0
               ? stories.map((story) => {

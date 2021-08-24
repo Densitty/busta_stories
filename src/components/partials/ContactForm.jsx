@@ -50,7 +50,7 @@ const ContactForm = () => {
   return (
     <form className="form" onSubmit={formSubmit}>
       <div className="form-group">
-        <h3 className="page__contact__heading">Contact Form</h3>
+        <h3 className="page__contact__heading animate">Contact Form</h3>
       </div>
 
       {formComplete && (
@@ -64,7 +64,7 @@ const ContactForm = () => {
           type="text"
           name="subject"
           placeholder="subject"
-          className="form-group__control"
+          className="form-group__control animate"
           value={contactDetails.subject}
           onChange={changeInput}
         />
@@ -74,7 +74,7 @@ const ContactForm = () => {
           type="text"
           name="name"
           placeholder="name"
-          className="form-group__control"
+          className="form-group__control animate"
           value={contactDetails.name}
           onChange={changeInput}
         />
@@ -84,7 +84,7 @@ const ContactForm = () => {
           type="email"
           name="email"
           placeholder="email"
-          className="form-group__control"
+          className="form-group__control animate"
           value={contactDetails.email}
           onChange={changeInput}
         />
@@ -95,14 +95,14 @@ const ContactForm = () => {
           id=""
           cols="12"
           rows="8"
-          className="form-group__textarea"
+          className="form-group__textarea animate"
           placeholder="your message here..."
           defaultValue={contactDetails.message}
           onChange={changeInput}
         ></textarea>
       </div>
       <div className="form-group">
-        <button type="submit" className="btn-dark">
+        <button type="submit" className="btn-dark animate">
           Message Us
         </button>
       </div>

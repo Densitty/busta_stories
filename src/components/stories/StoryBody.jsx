@@ -4,7 +4,7 @@ import StoryImage from "./StoryImage";
 
 const StoryBody = ({ story }) => {
   return (
-    <div className="stories__body">
+    <div className="stories__body animate">
       <StoryImage story={story} />
       <StoryContents story={story} />
     </div>

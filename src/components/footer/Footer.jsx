@@ -27,7 +27,9 @@ const Footer = () => {
           </div>
 
           <div className="footer__bottom">
-            <p>&copy; copyright busta stories {new Date().getFullYear()}</p>
+            <p className="animate">
+              &copy; copyright busta stories {new Date().getFullYear()}
+            </p>
           </div>
         </div>
       </div>

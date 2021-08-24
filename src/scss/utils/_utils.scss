@@ -68,3 +68,15 @@
   background-clip: text; /* clip the bg color above to the text here */
   color: transparent;
 }
+
+
+.animate {
+  transform: translateY(-10rem) scale(0);
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.animateElement {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}

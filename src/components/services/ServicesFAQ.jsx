@@ -17,7 +17,7 @@ const ServicesFAQ = () => {
     <div>
       {state.questions.map((question, index) => {
         return (
-          <div key={question.id} className="services__list">
+          <div key={question.id} className="services__list animate">
             <div
               className="services__list__heading"
               onClick={() => showDetails(question.id)}

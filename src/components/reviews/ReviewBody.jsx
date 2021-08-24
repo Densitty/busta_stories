@@ -3,6 +3,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { BsFillStarFill, BsStar } from "react-icons/bs";
 
 const ReviewBody = ({ name, comment, stars, image }) => {
+  // rating stars display
   const rating = (givenRating) => {
     const container = [];
     const totalRatingValue = 5;
@@ -36,7 +37,7 @@ const ReviewBody = ({ name, comment, stars, image }) => {
   };
   return (
     <section className="col-4 pad-15">
-      <article className="reviews__body">
+      <article className="reviews__body animate">
         <div className="reviews__body__contents">
           <div className="reviews__body__contents__image">
             <LazyLoadImage src={image} alt={name} />

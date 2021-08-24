@@ -13,7 +13,7 @@ const PageContainer = ({ heading, copyWord, description, children }) => {
           <div className="row">
             <div className="col-6">{children}</div>
             <div className="col-6">
-              <article className="page__info">
+              <article className="page__info animate">
                 <h2 className="heading">{heading}</h2>
                 <h2 className="page__info__heading">{copyWord}</h2>
                 <p className="page__info__msg">{description}</p>

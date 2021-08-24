@@ -12,12 +12,12 @@ const Genres = () => {
       <div className="container">
         <section className="row m-right-15 m-left-15">
           <article className="col-6 pad-15">
-            <h3 className="genres__heading">
+            <h3 className="genres__heading animate">
               Engage in the best of heart-warming stories
             </h3>
           </article>
           <article className="col-6 pad-15">
-            <p className="genres__paragraph">
+            <p className="genres__paragraph animate">
               Get ready for a bumpy ride in hear-warming stories of various
               guys' engagement experiences with thick, curvy and voluptuous
               ladies. Our ladies also share their stories and experiences with

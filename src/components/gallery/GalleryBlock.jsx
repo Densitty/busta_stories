@@ -14,7 +14,7 @@ const GalleryBlock = ({ galleryItem }) => {
 
   return (
     <div className="col-3">
-      <div className="gallery__image" onClick={() => openImageModal()}>
+      <div className="gallery__image animate" onClick={() => openImageModal()}>
         <LazyLoadImage src={galleryItem.image} alt={galleryItem.name} />
       </div>
     </div>
