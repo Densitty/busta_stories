@@ -5,6 +5,10 @@
   // min-height: 60rem;
   margin-top: 8rem;
   padding: 8rem 0;
+  @include responsive(xtrasm) {
+    margin-top: 4rem;
+    padding: 4rem 0;
+  }
 
   &__container {
     // width: 100%;
@@ -20,6 +24,9 @@
   &__intro {
     &__img {
       width: 15rem;
+      @include responsive(small) {
+        width: 10rem;
+      }
 
       img {
         width: 100%;
@@ -36,6 +43,13 @@
       font-weight: 400;
       width: 80%;
       line-height: 1.5;
+      @include responsive(small) {
+        margin-top: 1.5rem;
+        font-size: 1.4rem;
+      }
+      @include responsive(xtrasm) {
+        width: 100%;
+      }
     }
   }
   
@@ -51,6 +65,7 @@
 
   &__ul {
     list-style: none;
+    
 
     &__li {
       display: flex;

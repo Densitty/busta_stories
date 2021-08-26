@@ -12,13 +12,17 @@
   background: $white;
   z-index: 10;
   transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  @include responsive(xtrasm) {
+    width: 100%;
+    background: rgba($white, 0.9);
+  }
 
   &--open {
     transform: translateX(0);
   }
   
   &--close {
-    transform: translateX(100%);
+    transform: translateX(200%);
   }
 
   &__content {
@@ -31,11 +35,14 @@
         text-decoration: none;
         color: $black;
         font-size: 2rem;
-        text-align: right;
         padding: 1.5rem 3rem;
         font-weight: 400;
         position: relative;
         @include flexAlign(flex, flex-end, null);
+        @include responsive(xtrasm) {
+          justify-content: center;
+          transform-origin: center;
+        }
 
         &:hover {
           color: $white;
@@ -47,8 +54,11 @@
           background: linear-gradient(to right, $main1, $main2);
           z-index: -1;
           transform: scale(0);
-          transform-origin: right top;
+          transform-origin: right;
           transition: all 0.5s ease;
+          @include responsive(xtrasm) {
+            transform-origin: center;
+          }
         }
 
         &:hover::before {

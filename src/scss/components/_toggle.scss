@@ -6,26 +6,40 @@
   cursor: pointer;
   z-index: 15;
   flex-direction: column;
+  @include responsive(small) {
+    right: 2rem;
+  }
   
   div:nth-child(1) {
     @include togglers(4rem);
     transition: all 0.5s linear;
     /* transform: rotateZ(-45deg) translateX(-30%); */
     transform: rotateZ(-45deg) translateY(1.1rem);
+    @include responsive(small) {
+      width: 3rem;
+      height: 0.3rem;
+    }
   }
   
   div:nth-child(2) {
     transition: all 1s linear;
     opacity: 0;
     // visibility: hidden;
+    @include responsive(small) {
+      width: 3rem;
+      height: 0.3rem;
+    }
   }
   
   div:nth-child(3) {
-    @include togglers(3rem);
+    @include togglers(4rem);
     transition: all 0.5s linear;
-    width: 4rem;
     // transform: rotateZ(45deg) translate(-27%);
     transform: rotateZ(45deg) translateY(-1rem);
+    @include responsive(small) {
+      width: 3rem;
+      height: 0.3rem;
+    }
   }
 }
 
@@ -40,6 +54,10 @@
   div:nth-child(1) {
     @include togglers(4rem);
     transition: all 0.5s linear;
+    @include responsive(small) {
+      width: 2.5rem;
+      height: 0.3rem;
+    }
   }
 
   div:nth-child(2) {
@@ -47,10 +65,18 @@
     transition: all 1s linear;
     opacity: 1;
     // visibility: visible;
+    @include responsive(small) {
+      width: 1.5rem;
+      height: 0.3rem;
+    }
   }
 
   div:nth-child(3) {
     @include togglers(3rem);
     transition: all 0.5s linear;
+    @include responsive(small) {
+      width: 2rem;
+      height: 0.3rem;
+    }
   }
 }

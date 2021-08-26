@@ -19,10 +19,11 @@ const Genres = () => {
           <article className="col-6 pad-15">
             <p className="genres__paragraph animate">
               Get ready for a bumpy ride in hear-warming stories of various
-              guys' engagement experiences with thick, curvy and voluptuous
-              ladies. Our ladies also share their stories and experiences with
-              the guys that loved them. Get ready for an engrossing journey, as
-              your senses are ready to be tittilated with stories about LASSES
+              story-writers all for you. It promises to be lots of fun time as
+              we get you glued to your seat and your screen, gladly enjoying
+              your leisure-time with stories from various genres you like. If
+              your desired stories are not available, you request it and the
+              writers make it available for you. All for your reading pleasure.
             </p>
           </article>
         </section>

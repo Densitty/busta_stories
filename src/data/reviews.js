@@ -1,7 +1,7 @@
 const reviews = [
   {
     id: 1,
-    name: "miriba mwengele",
+    name: "livi gacha",
     comment:
       "I love reading stories during my leisure time and Bust Stories provide me with varieties.",
     stars: 4,
@@ -24,7 +24,7 @@ const reviews = [
   },
   {
     id: 4,
-    name: "anita kareem",
+    name: "amal kareem",
     comment: "You need to feature more sci-fi stories too",
     stars: 5,
     image: "/assets/busta_stories/reviewUsers/user4.jpg",

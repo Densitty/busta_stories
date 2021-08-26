@@ -2,18 +2,29 @@
 
 .genreInfo {
   margin: 8rem 0;
+  @include responsive(xtrasm) {
+    margin: 6rem 0;
+  }
 
   &__text {
     margin-bottom: 4rem;
     font-size: 2rem;
     color: $silverdark;
     line-height: 2.8rem;
+
+    @include responsive(xtrasm) {
+      font-size: 1.5rem;
+      width: 100%;
+    }
   }
 
   &__details {
     @include flexAlign(flex, space-between, center);
     padding: 1.3rem 0;
     border-bottom: 1px dotted $silverlight-50;
+    @include responsive(xtrasm) {
+      padding: 1.1rem 0;
+    }
 
     &__text, &__head {
       font-size: 1.4rem;

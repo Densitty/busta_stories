@@ -6,20 +6,18 @@
   @include abstracts.flexAlign(flex, center, center);
   // hide nav-bars when modal opens
   z-index: 20;
-
-  &__heading {
-    font-size: 2rem;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
-    text-transform: capitalize;
-  }
-
+  
+  
   &__body {
     background-color: abstracts.$white;
     padding: 2rem;
     font-size: 1.4rem;
     // width: 40vw;
     width: 38rem;
+    @include abstracts.responsive(small) {
+      padding: 1.2rem;
+      width: 90%;
+    }
 
     @include abstracts.animation(modal, 1s, ease-out, null, null);
     @keyframes modal {
@@ -31,6 +29,23 @@
         opacity: 1;
         transform: translateY(0);
       }
+    }
+  }
+
+  &__heading {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+
+    @include abstracts.responsive(small) {
+      font-size: 1.5rem;
+    }
+  }
+
+  span {
+    @include abstracts.responsive(xtrasm) {
+      font-size: 1.2rem;
     }
   }
 }

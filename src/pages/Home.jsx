@@ -13,8 +13,9 @@ import Footer from "../components/footer/Footer";
 
 const Home = () => {
   const [home, setHome] = useState({
-    heading: "thick ladies make the head turn",
-    para: "come read and share your stories with big ladies",
+    // heading: "thick ladies make the head turn",
+    heading: "everyone loves leisure time",
+    para: "that is why we want your leisure time to be fun-filled with great stories",
   });
 
   const dataFromContext = useGlobalContext();
@@ -36,7 +37,7 @@ const Home = () => {
         />
         <meta
           name="keywords"
-          content="stories, curvy, girls, ladies, women, men, breasts, boobs, voluptuous, fat, erotic, romance, travel, tits, titties, thighs, horny, love, hair, body, lust, busty, travels, engagements, career, beauty"
+          content="stories, curvy, girls, ladies, women, men, romance, travel, love, hair, body, lust, busty, travels, engagements, career, beauty, humour"
         />
       </Helmet>
       <Header {...home}>

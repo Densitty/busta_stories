@@ -13,7 +13,7 @@ const Gallery = () => {
       {lightboxStatus && <GalleryModal />}
       <div className="gallery">
         <div className="container">
-          <h2 className="heading animate">Checkout Curvy Bevies</h2>
+          <h2 className="heading animate">Our Writers' Cities</h2>
           <div className="row">
             {gallery.length > 0
               ? gallery.map((galleryItem) => {

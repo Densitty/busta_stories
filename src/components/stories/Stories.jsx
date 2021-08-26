@@ -10,7 +10,7 @@ const Stories = ({ stories, genre }) => {
           <div className="row">
             {stories.length > 0
               ? stories.map((story) => {
-                  console.log(story);
+                  // console.log(story);
                   return (
                     <div key={story.id} className="col-3 pad-15">
                       <StoryBody story={story} />

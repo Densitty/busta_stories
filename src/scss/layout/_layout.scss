@@ -1,12 +1,60 @@
+@use "../abstracts/" as *;
+
 .row {
   // width: 100%;
   display: flex;
   flex-wrap: wrap;
+  @include responsive(small) {
+    display: block;
+  }
 }
 
 /* out of 100%, divide into 12 places, to get widths for 12 column */
 @for $i from 1 through 12 {
   .col-#{$i} {
     width: 100% / 12 * $i;
+
+    @if $i == 6 {
+      @include responsive(small) {
+        width: 100%;
+      }
+    }
+
+    // for contents with 4 rows (i.e i = 3)
+    @if $i == 3 {
+      @include responsive(medium) {
+        // 3 columns 
+        width: 100% / 12 * 4;
+      }
+      
+      @include responsive(small) {
+        // 2 columns 
+        width: 100% / 12 * 6;
+      }
+      
+      @include responsive(xtrasm) {
+        // 1 column 
+        width: 100% / 12 * 12;
+      }
+    }
+    
+    // for contents with 3 rows (i.e i = 4)
+    @if $i == 4 {
+      @include responsive(small) {
+        width: 50% ;
+      }
+
+      // for small and xtra small viewport widths
+      @include responsive(small) {
+        width: 100% ;
+      }
+    }
+
+    @if $i == 8 {
+      @include responsive(medium) {
+        width: 100%;
+      }
+    }
+    
   }
 }

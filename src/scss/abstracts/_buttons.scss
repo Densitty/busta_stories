@@ -2,11 +2,28 @@
 
 .btn-default {
   @include buttonStyle($main1, $main2, $white, 4.5rem, .5rem, 400, 0, 2rem, 1.4rem);
+  // responsiveness on btns
+  @include responsive(small) {
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.2rem;
+    padding: 0 1.5rem;
+  }
 }
 
 .btn-dark {
   @include buttonStyle($blackDark, $blackDark, $white, 4.5rem, .5rem, 400, 0, 2rem, 1.4rem);
   letter-spacing: .1rem;
+  @include responsive(small) {
+    @include buttonStyle($blackDark, $blackDark, $white, 4rem, .5rem, 400, 0, 1.5rem, 1.2rem);
+    line-height: 4rem;
+  }
+  
+  @include responsive(xtrasm) {
+    @include buttonStyle($blackDark, $blackDark, $white, 3rem, .5rem, 400, 0, 1.3rem, 1.2rem);
+    // line-height: 3rem;
+    margin-bottom: 0.5rem
+  }
 }
 
 .btn--dark--sm {
@@ -17,5 +34,7 @@
   // ($color1, $color2, $text_color, $height, $border_radius, $fontWeight, $paddingVert, $paddingHR, $font_size)
   @include buttonStyle($white, $white, $blackDark, 3rem, 0.5rem, 400, 0.9rem, 2rem, 1.4rem);
   letter-spacing: .1rem;
+
+  
 }
 

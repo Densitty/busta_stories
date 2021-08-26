@@ -1,6 +1,66 @@
 const gallery = [
   {
     id: 1,
+    name: "London",
+    image: "/assets/busta_stories/gallery/london.jpg",
+  },
+  {
+    id: 2,
+    name: "London",
+    image: "/assets/busta_stories/gallery/london2.jpg",
+  },
+  {
+    id: 3,
+    name: "Turkey",
+    image: "/assets/busta_stories/gallery/turkey.jpg",
+  },
+  {
+    id: 4,
+    name: "Thailand",
+    image: "/assets/busta_stories/gallery/thailand.jpg",
+  },
+  {
+    id: 5,
+    name: "Thailand",
+    image: "/assets/busta_stories/gallery/thailand2.jpg",
+  },
+  {
+    id: 6,
+    name: "Spain",
+    image: "/assets/busta_stories/gallery/spain.jpg",
+  },
+  {
+    id: 7,
+    name: "Spain",
+    image: "/assets/busta_stories/gallery/spain2.jpg",
+  },
+  {
+    id: 8,
+    name: "Switzerland",
+    image: "/assets/busta_stories/gallery/switzerland.jpg",
+  },
+  {
+    id: 9,
+    name: "Switzerland",
+    image: "/assets/busta_stories/gallery/switzerland2.jpg",
+  },
+  {
+    id: 10,
+    name: "France",
+    image: "/assets/busta_stories/gallery/france.jpg",
+  },
+  {
+    id: 11,
+    name: "United State of America",
+    image: "/assets/busta_stories/gallery/usa.jpg",
+  },
+  {
+    id: 12,
+    name: "Pakistan",
+    image: "/assets/busta_stories/gallery/pakistan.jpg",
+  },
+  /* {
+    id: 1,
     name: "Tanya",
     image: "/assets/busta_stories/gallery/beauty_1.jpg",
   },
@@ -63,7 +123,7 @@ const gallery = [
     id: 13,
     name: "Azeezah",
     image: "/assets/busta_stories/gallery/beauty_13.jpg",
-  },
+  }, */
 ];
 
 export default gallery;

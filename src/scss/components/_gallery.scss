@@ -2,6 +2,9 @@
 
 .gallery {
   margin: 8rem 0;
+  @include responsive(xtrasm) {
+    margin: 6rem 0;
+  }
 
   .heading {
     transform: rotateZ(-3deg);
@@ -12,6 +15,9 @@
     height: 30rem;
     width: 100%;
     overflow: hidden;
+    @include responsive(xtrasm) {
+      height: 20rem;
+    }
 
     img {
       width: 100%;
@@ -45,6 +51,11 @@
       height: 40rem;
       overflow: hidden;
       animation: cardAnimation 0.5s linear ;
+      @include responsive(xtrasm) {
+        width: 100%;
+        height: 50%;
+        // height: auto;
+      }
       @keyframes cardAnimation {
         from {
           opacity: 0;

@@ -2,6 +2,9 @@
 
 .genres {
   margin: 8rem 0;
+  @include responsive(xtrasm) {
+    margin: 4rem 0;
+  }
 
   &__heading {
     font-size: 2.8rem;
@@ -12,6 +15,15 @@
     font-weight: 500;
     position: relative;
 
+    @include responsive(large) {
+      width: 100%;
+    }
+    @include responsive(xtrasm) {
+      font-size: 2.1rem;
+      line-height: 3.5rem;
+      text-transform: capitalize;
+    }
+    
     &::after {
       position: absolute;
       content: "";
@@ -20,6 +32,9 @@
       width: 40%;
       height: 0.2rem;
       background-color: $main1;
+      @include responsive(large) {
+        width: 50%;
+      }
     }
   }
 
@@ -33,6 +48,9 @@
   &__block {
     margin-top: 6rem;
 
+    @include responsive(xtrasm) {
+      margin-top: 4rem;
+    }
     // & .col-3 {
       // either use this style or use utility class on the parent (.row) to create a space between each image
       // padding: 1.5rem;
@@ -90,21 +108,23 @@
     }
 
     &__info {
-      @include position(absolute, 25%, 0, null, null, 0, 50%);
-      background: linear-gradient(to right, $main1, $main2);
+      @include position(absolute, 0, 0, null, null, 100%, 100%);
+      background: linear-gradient(to right, rgba($main1, 0.7), rgba($main2, 0.7));
       @include flexAlign(flex, center, center);
       transition: all 0.5s ease-out;
+      transform: scale(0);
       // opacity: 0;
       visibility: hidden;
-
-      &__text {
-        transform: rotate(-90deg);
+      
+      // &__text {
+        //   transform: rotate(-90deg);
+        // }
       }
-    }
-
-    &:hover &__info {
-      width: 100%;
-      transform: rotate(90deg);
+      
+      &:hover &__info {
+        transform: scale(1);
+        // width: 100%;
+      // transform: rotate(90deg);
       // opacity: 1;
       visibility: visible;
     }

@@ -35,6 +35,7 @@ const Login = (props) => {
     // console.log(register);
     const name = e.target.name;
     const value = e.target.value;
+    setFormComplete(false);
     setLogin({
       ...login,
       [name]: value,

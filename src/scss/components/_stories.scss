@@ -7,6 +7,11 @@
   padding: 13rem 0;
   transform: skewY(-5deg);
   
+  @include responsive(small) {
+    margin: 6rem 0;
+    padding: 6rem 0;
+  }
+  
   &__container {
     transform: skewY(5deg);
   }
@@ -26,6 +31,9 @@
       border-top-right-radius: 1rem;
       overflow: hidden;
       position: relative;
+      @include responsive(xtrasm) {
+        height: 15rem;
+      }
       
       img {
         object-fit: cover;
@@ -65,14 +73,17 @@
         &__name {
           font-size: 1.3rem;
           font-weight: 600;
+          @include responsive(xtrasm) {
+            font-size: 1.2rem;
+          }
         }
-
+        
         &__author {
           font-size: 1.1rem;
           color: $main2;
           font-style: italic;
           margin-bottom: 0.8rem;
-          margin-top: 0.6rem
+          margin-top: 0.6rem;
         }
         
         &__duration {
@@ -83,6 +94,9 @@
           &__time {
             font-size: 1.4rem;
             margin-left: 0.6rem;
+            @include responsive(xtrasm) {
+              font-size: 1.2rem;
+            }
           }
         }
       }
@@ -90,15 +104,21 @@
       &__features {
         @include flexAlign(flex, space-between, center );
         margin: 0.5rem 0 0.6rem;
-
+        
         &__name {
           font-size: 1.5rem;
           text-transform: capitalize;
+          @include responsive(xtrasm) {
+            font-size: 1.2rem;
+          }
         }
       }
-
+      
       &__button {
         margin-top: 1rem;
+        @include responsive(xtrasm) {
+          font-size: 1.2rem;
+        }
       }
     }
   }

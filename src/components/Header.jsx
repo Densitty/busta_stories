@@ -6,9 +6,9 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 const Header = ({ heading, para, children, image }) => {
   const history = useHistory();
   const [header, setHeader] = useState({
-    // path: "/assets/busta_stories/videos/eros.mp4",
+    path: "/assets/busta_stories/videos/story.mp4",
     poster: "/assets/busta_stories/videos/big_black_tempty.jpg",
-    logo: "/assets/busta_stories/images/logo.png",
+    logo: "/assets/busta_stories/images/busta_stories.svg",
   });
 
   return (

@@ -5,12 +5,38 @@
   max-width: 1200px;
   margin: 0 auto;
   // background: red;
+  
+  @include responsive(large) {
+    max-width: 1200px;
+    padding: 0 5rem;
+  }
+  
+  @include responsive(medium) {
+    max-width: 100%;
+    padding: 0 4rem;
+    
+  }
+  @include responsive(small) {
+    padding: 0 2rem;
+  }
+  @include responsive(xtrasm) {
+    padding: 0 1.5rem;
+  }
+
 }
 
 .space_between {
   display: flex;
   justify-content: space-between;
-  align-items: baseline
+  align-items: baseline;
+  
+  @include responsive(xtrasm) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
 }
 
 .pr {
@@ -67,6 +93,10 @@
   background: linear-gradient(to right, $main1, $main2);
   background-clip: text; /* clip the bg color above to the text here */
   color: transparent;
+
+  @include responsive(xtrasm) {
+    margin-bottom: 1rem;
+  }
 }
 
 
