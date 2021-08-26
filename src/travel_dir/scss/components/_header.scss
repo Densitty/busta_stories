@@ -6,6 +6,7 @@
     clip-path: polygon(50% 0%, 100% 0, 100% 90%, 0 100%, 0 100%, 0% 60%, 0 0);
     &__logo {
         @include abstracts.position(absolute, 3rem, 0, null, null, null, null);
+        
         z-index: 1;
         @include abstracts.responsive(large) {
             left: 5rem;
@@ -19,11 +20,12 @@
         @include abstracts.responsive(xsmall) {
             left: 1.5rem;
         }
+
         img {
             width: 12rem;
             height: 6rem;
             object-fit: cover;
-            cursor: pointer;
+            // cursor: pointer;
             @include abstracts.responsive(small) {
                 width: 10rem;
                 height: 5rem;
