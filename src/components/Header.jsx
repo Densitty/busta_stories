@@ -7,7 +7,7 @@ const Header = ({ heading, para, children, image }) => {
   const history = useHistory();
   const [header, setHeader] = useState({
     path: "/assets/busta_stories/videos/story.mp4",
-    // poster: "/assets/busta_stories/videos/big_black_tempty.jpg",
+    poster: "/assets/busta_stories/images/lovely_reader.jpg",
     logo: "/assets/busta_stories/images/busta_stories.svg",
   });
 
