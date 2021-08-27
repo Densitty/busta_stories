@@ -3,7 +3,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const FooterIntro = () => {
   const [intro, setIntro] = useState({
-    logo: "/assets/busta_stories/footer/logo.png",
+    logo: "/assets/busta_stories/images/busta_stories.svg",
     message:
       "Hop on to the world of amazing fun with stories that titillates the senses and make your leisure time fun-filled with Busta Stories. Lots of fun awaits.",
   });
