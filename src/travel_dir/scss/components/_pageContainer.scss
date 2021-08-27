@@ -22,8 +22,9 @@
     }
     &__info {
         margin-left: 4rem;
-        @include responsive(small) {
+        @include responsive(medium) {
             margin-left: 0;
+            margin-top: 4rem;
         }
         &__heading {
             font-size: 4rem;
