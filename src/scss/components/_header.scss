@@ -5,9 +5,9 @@
   height: 100vh;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);
-  
+
   &__logo {
-    @include abstracts.position(absolute, 3rem, 0, null, null, null, null);
+    @include abstracts.position(absolute, 1rem, 0, null, null, null, null);
     // background: rgba(#266baf, 0.4);
     z-index: 10;
     cursor: pointer;
@@ -15,12 +15,11 @@
       width: 11rem;
       height: 6rem;
     }
-    
-    
+
     img {
-      width: 25rem;
+      width: 15rem;
       // height: auto;
-      height: 10rem;
+      height: 8rem;
       object-fit: cover;
       @include abstracts.responsive(small) {
         width: 80%;
@@ -39,33 +38,29 @@
       object-fit: cover;
     }
 
-    
-
     img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      // image-rendering: pixelated;
+      animation: headerImage 0.5s linear;
+
+      @include abstracts.responsive(small) {
         object-position: center;
-        display: block;
-        // image-rendering: pixelated;
-        animation: headerImage 0.5s linear;
+      }
 
-        @include abstracts.responsive(small) {
-          object-position: center;
+      @keyframes headerImage {
+        0% {
+          opacity: 0;
         }
-
-        @keyframes headerImage {
-          0% {
-            opacity: 0
-          }
-          100% {
-            opacity: 1
-          }
+        100% {
+          opacity: 1;
         }
+      }
     }
   }
-
-  
 }
 
 .header__contents {
@@ -85,7 +80,7 @@
         font-size: 4rem;
         line-height: 1.2;
         // animation: name duration timing-function delay iteration-count direction fill-mode;
-        @include abstracts.animation(header, 1s, ease-in, null , forwards);
+        @include abstracts.animation(header, 1s, ease-in, null, forwards);
         // responsiveness on the header
         @include abstracts.responsive(medium) {
           font-size: 4rem;
@@ -155,6 +150,3 @@
     }
   }
 }
-
-
-

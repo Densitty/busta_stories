@@ -9,7 +9,7 @@
   @include responsive(small) {
     right: 2rem;
   }
-  
+
   div:nth-child(1) {
     @include togglers(4rem);
     transition: all 0.5s linear;
@@ -20,7 +20,7 @@
       height: 0.3rem;
     }
   }
-  
+
   div:nth-child(2) {
     transition: all 1s linear;
     opacity: 0;
@@ -30,7 +30,7 @@
       height: 0.3rem;
     }
   }
-  
+
   div:nth-child(3) {
     @include togglers(4rem);
     transition: all 0.5s linear;
