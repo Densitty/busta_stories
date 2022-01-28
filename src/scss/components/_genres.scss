@@ -48,11 +48,11 @@
   &__block {
     margin-top: 6rem;
 
-    @include responsive(md) {
+    @include responsive(medium) {
       margin-top: 5rem;
     }
 
-    @include responsive(xtrasm) {
+    @include responsive(small) {
       margin-top: 4rem;
     }
 

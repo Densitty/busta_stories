@@ -6,6 +6,10 @@
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);
 
+  @include abstracts.responsive(small) {
+    height: 70vh;
+  }
+
   &__logo {
     @include abstracts.position(absolute, 1rem, 0, null, null, null, null);
     // background: rgba(#266baf, 0.4);
@@ -70,6 +74,10 @@
   &__text {
     height: 100vh;
     @include abstracts.flexAlign(flex, center, center);
+
+    @include abstracts.responsive(small) {
+      height: 65vh;
+    }
 
     &__block {
       color: abstracts.$white;
