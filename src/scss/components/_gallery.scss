@@ -7,7 +7,7 @@
   }
 
   .heading {
-    transform: rotateZ(-3deg);
+    // transform: rotateZ(-3deg);
     transform-origin: left;
   }
 
@@ -50,7 +50,7 @@
       width: 60rem;
       height: 40rem;
       overflow: hidden;
-      animation: cardAnimation 0.5s linear ;
+      animation: cardAnimation 0.5s linear;
       @include responsive(xtrasm) {
         width: 100%;
         height: 50%;
@@ -66,18 +66,18 @@
           transform: translateY(0);
         }
       }
-      
+
       &__image {
         height: 100%;
         width: 100%;
         overflow: hidden;
-        
+
         img {
           object-fit: cover;
           width: 100%;
           height: 100%;
           animation: imageAnimation 0.5s linear;
-          
+
           @keyframes imageAnimation {
             from {
               transform: scale(0);
@@ -88,7 +88,6 @@
               opacity: 1;
             }
           }
-
         }
       }
     }

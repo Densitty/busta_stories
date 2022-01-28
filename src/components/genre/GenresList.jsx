@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const GenresList = ({ genre }) => {
   const { id, genre: gen, category, image, language, details } = genre;
   return (
-    <article className="col-3 pad-15">
+    <article className="col-4 pad-15">
       <div className="genres__card animate">
         <div className="genres__card__img">
           <LazyLoadImage src={image} alt={category} />

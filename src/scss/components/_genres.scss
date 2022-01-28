@@ -23,7 +23,7 @@
       line-height: 3.5rem;
       text-transform: capitalize;
     }
-    
+
     &::after {
       position: absolute;
       content: "";
@@ -48,14 +48,19 @@
   &__block {
     margin-top: 6rem;
 
+    @include responsive(md) {
+      margin-top: 5rem;
+    }
+
     @include responsive(xtrasm) {
       margin-top: 4rem;
     }
+
     // & .col-3 {
-      // either use this style or use utility class on the parent (.row) to create a space between each image
-      // padding: 1.5rem;
+    // either use this style or use utility class on the parent (.row) to create a space between each image
+    // padding: 1.5rem;
     // }
-  } 
+  }
 
   &__card {
     width: 100%;
@@ -78,17 +83,15 @@
         height: 100%;
         object-fit: cover;
         transition: all 0.5s linear;
-        image-rendering: pixelated
+        image-rendering: pixelated;
       }
-
-      
     }
 
     &__layer {
       @include position(absolute, 0, 0, 0, 0, 100%, 100%);
       background: linear-gradient(to bottom, transparent 30%, $black);
       @include flexAlign(flex, center, flex-end);
-      
+
       &__content {
         // flexAlign($flex, $justify-content, $align-items)
         // @include flexAlign(flex, space-between, null);
@@ -109,21 +112,25 @@
 
     &__info {
       @include position(absolute, 0, 0, null, null, 100%, 100%);
-      background: linear-gradient(to right, rgba($main1, 0.7), rgba($main2, 0.7));
+      background: linear-gradient(
+        to right,
+        rgba($main1, 0.7),
+        rgba($main2, 0.7)
+      );
       @include flexAlign(flex, center, center);
       transition: all 0.5s ease-out;
       transform: scale(0);
       // opacity: 0;
       visibility: hidden;
-      
+
       // &__text {
-        //   transform: rotate(-90deg);
-        // }
-      }
-      
-      &:hover &__info {
-        transform: scale(1);
-        // width: 100%;
+      //   transform: rotate(-90deg);
+      // }
+    }
+
+    &:hover &__info {
+      transform: scale(1);
+      // width: 100%;
       // transform: rotate(90deg);
       // opacity: 1;
       visibility: visible;
